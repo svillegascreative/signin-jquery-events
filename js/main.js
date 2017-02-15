@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $('.signin').on('click', function() {
-    $('.modal').fadeIn().css('display', 'block');
+    $('.modal').fadeIn();
   });
 
   $('.modal').on('click', '.close', function() {
@@ -10,6 +10,10 @@ $(document).ready(function() {
 
   $('.submit').on('click', function() {
     $('.getstarted>input').addClass('error');
+  });
+
+  $('.getstarted>input').on('click', function() {
+    $(this).removeClass('error');
   });
 
 });
