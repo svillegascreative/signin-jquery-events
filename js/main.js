@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
   $('.signin').on('click', function() {
-    $('.modal').fadeIn().css('display', 'block')
+    $('.modal').fadeIn().css('display', 'block');
+  });
+
+  $('.modal').on('click', '.close', function() {
+    $('.modal').fadeOut()
   });
 
 });
