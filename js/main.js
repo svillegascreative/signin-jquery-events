@@ -8,11 +8,17 @@ $(document).ready(function() {
     $('.modal').fadeOut()
   });
 
-  $('.submit').on('click', function() {
+  $('.modal').on('click', function() {
+    $(this).fadeOut()
+  });
+
+  $('.submit').on('click', function(event) {
+    event.stopPropagation();
     $('.getstarted>input').addClass('error');
   });
 
   $('.getstarted>input').on('click', function() {
+    event.stopPropagation();
     $(this).removeClass('error');
   });
 
